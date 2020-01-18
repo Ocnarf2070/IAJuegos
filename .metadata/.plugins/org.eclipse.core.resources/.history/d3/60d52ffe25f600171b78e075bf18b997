@@ -1,0 +1,15 @@
+package prPrueba2;
+
+public class k {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Object [] aux = new Object [3];
+		aux[0]=true;
+		aux[1]=1;
+		aux[2]=2;
+		if((boolean)aux[0]&&((int)aux[1]+(int)aux[2])==3)System.out.println("Vale");
+	}
+
+}
+

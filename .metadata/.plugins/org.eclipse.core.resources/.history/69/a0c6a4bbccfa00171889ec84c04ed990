@@ -1,0 +1,36 @@
+package conectak;
+
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
+import espaciojuego.Juego;
+import jugadores.Jugador;
+import jugadores.JugadorAleatorio;
+import jugadores.JugadorEvaluarTV;
+
+public class TestConectaKEj1b {
+	public static void main(String[] args) {
+		System.out.println("Aleatorio frente a EvaluarTV");
+		verEntrenamientoAleatorio(3, 3, 3, 0.1, 0.1, 1500, 100, 1000);
+		verEntrenamientoAleatorio(4, 4, 3, 0.1, 0.1, 1000, 100, 1000);
+		verEntrenamientoAleatorio(4, 4, 4, 0.1, 0.1, 5000, 100, 1000);
+		
+	}
+	public static void verEntrenamientoAleatorio (int f, int c, int k, double alfa, double pexp, int partidas, int cada, int pruebas){
+		System.out.print("Entrenamos c-"+k+" "+f+" x "+c+". Alfa: "+alfa+" Pexp: "+pexp);
+		System.out.println(" Partidas: "+partidas+" Pruebas: "+pruebas+" cada "+cada);
+		
+		ConectaK e = new ConectaK(f,c,k);
+        JugadorEvaluarTV<ConectaK> j1 = new JugadorEvaluarTV<ConectaK>(alfa);
+        Jugador<ConectaK> j2 = new JugadorAleatorio<>();
+
+        Jugador<ConectaK> ja = new JugadorAleatorio<>();
+        for(int i = 0; i< partidas; i++){
+        	j1.aprendeTurno1(ja, e, pexp);
+        	if(i%cada==0) {
+        		Juego<ConectaK,Jugador<ConectaK>,Jugador<ConectaK>> juego1 = new Juego<ConectaK, Jugador<ConectaK>, Jugador<ConectaK>>(j1,j2,e);
+        		juego1.jugarNPartidas(pruebas);
+        	}
+        }
+        System.out.println();
+	}
+}

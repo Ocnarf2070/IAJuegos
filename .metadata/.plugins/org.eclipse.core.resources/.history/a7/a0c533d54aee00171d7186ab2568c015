@@ -1,0 +1,18 @@
+package minigammon;
+
+import java.util.Random;
+
+public class Dice {
+	private Random dice;
+	private int numCaras;
+	public Dice(int caras) {
+		dice = new Random();
+		numCaras=caras;
+		// TODO Auto-generated constructor stub
+	}
+	public int sacarNumero() {
+		int num=-1;
+		while(num<1&&num>numCaras)num = dice.nextInt(numCaras+1);
+		return num;
+	}
+}

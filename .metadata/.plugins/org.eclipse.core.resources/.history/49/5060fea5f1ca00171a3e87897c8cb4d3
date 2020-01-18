@@ -1,0 +1,17 @@
+package BaldursGate;
+
+import EspacioDeEstados.Problema;
+
+public class PBaldursGate extends Problema<BaldursGateMap> {
+
+	public PBaldursGate() {
+		// TODO Auto-generated constructor stub
+	}
+	@SuppressWarnings("static-access")
+	@Override
+	public boolean esFinal(BaldursGateMap e) {
+		// TODO Auto-generated method stub
+		return e.x==e.fx&&e.y==e.fy;
+	}
+
+}

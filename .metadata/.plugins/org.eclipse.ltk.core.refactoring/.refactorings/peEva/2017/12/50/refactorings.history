@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Problema.java&apos; to &apos;prPractica2/src/EspacioDeEstados&apos;&#x0D;&#x0A;- Original project: &apos;peEva&apos;&#x0D;&#x0A;- Destination element: &apos;prPractica2/src/EspacioDeEstados&apos;&#x0D;&#x0A;- Original element: &apos;EspacioDeEstados.Problema.java&apos;" description="Copy compilation unit" destination="=prPractica2/src&lt;EspacioDeEstados" element1="/src&lt;EspacioDeEstados{Problema.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1513532440414" units="1" version="1.0"/>
+</session>

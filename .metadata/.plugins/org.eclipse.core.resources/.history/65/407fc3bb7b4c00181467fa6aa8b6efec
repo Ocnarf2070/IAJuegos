@@ -1,0 +1,25 @@
+package Pairs;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Test {
+
+	public static void main(String[] args) {
+		/*// TODO Auto-generated method stub
+		PriorityQueue<Pair<Integer, Integer>> pq = new PriorityQueue<>();
+		pq.add(new Pair<Integer, Integer>(7, 5));
+		pq.add(new Pair<Integer, Integer>(7,3));
+		pq.add(new Pair<Integer, Integer>(13, 8));
+		System.out.println(pq.toString());*/
+		List<Pair<Integer, Integer>> pares = new ArrayList<>();
+		for(int i=0;i<200;i++)pares.add(new Pair<Integer, Integer>(i, i+1));
+		Set<Pair<Integer, Integer>> J1= new TreeSet<>();
+		for(Pair<Integer,Integer>par: pares.subList(0, pares.size()/4))J1.add(par);
+		System.out.println(pares.toString());
+
+	}
+
+}
